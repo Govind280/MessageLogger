@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LoggerMicroService</name>
+    </assembly>
+    <members>
+        <member name="T:LoggerMicroService.Controllers.LoggerController">
+            <summary>
+            Logger Controller
+            </summary>
+        </member>
+        <member name="M:LoggerMicroService.Controllers.LoggerController.#ctor(LoggerMicroService.Helpers.IServiceHelper,LoggerMicroService.Helpers.ILogger,LoggerMicroService.Helpers.IMessageLogger)">
+            <summary>
+            Constructor for <see cref="T:LoggerMicroService.Controllers.LoggerController"/> with DI
+            </summary>
+            <param name="serviceHelper"><see cref="T:LoggerMicroService.Helpers.IServiceHelper"/></param>
+            <param name="logger"><see cref="T:LoggerMicroService.Helpers.ILogger"/></param>
+            <param name="messageLogger"><see cref="T:LoggerMicroService.Helpers.IMessageLogger"/></param>
+        </member>
+        <member name="M:LoggerMicroService.Controllers.LoggerController.ProcessTransaction">
+            <summary>
+            Process transaction by calling external service 
+            and logging response from external service
+            </summary>
+            <returns><see cref="T:LoggerMicroService.Models.ServiceResponse"/></returns>
+        </member>
+        <member name="T:LoggerMicroService.Helpers.ILogger">
+            <summary>
+            Logger Interface
+            </summary>
+        </member>
+        <member name="M:LoggerMicroService.Helpers.ILogger.Debug(System.String)">
+            <summary>
+            Logs message used for debugging purpose
+            </summary>
+            <param name="message">Log text</param>
+        </member>
+        <member name="M:LoggerMicroService.Helpers.ILogger.Info(System.String)">
+            <summary>
+            Logs message used as Information
+            </summary>
+            <param name="message">Log text</param>
+        </member>
+        <member name="M:LoggerMicroService.Helpers.ILogger.Error(System.String)">
+            <summary>
+            Logs Error message
+            </summary>
+            <param name="message">Log text</param>
+        </member>
+        <member name="M:LoggerMicroService.Helpers.ILogger.Warn(System.String)">
+            <summary>
+            Logs message used as Warning
+            </summary>
+            <param name="message">Log text</param>
+        </member>
+        <member name="T:LoggerMicroService.Helpers.IMessageLogger">
+            <summary>
+            MessageLogger Interface
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:LoggerMicroService.Helpers.IMessageLogger.MessageLogger_Info(LoggerMicroService.Models.ServiceResponse)" -->
+        <member name="T:LoggerMicroService.Helpers.IServiceHelper">
+            <summary>
+            IServiceHelper Interface
+            </summary>
+        </member>
+        <member name="M:LoggerMicroService.Helpers.IServiceHelper.GetAsync">
+            <summary>
+            Calls external service to get message
+            </summary>
+            <returns><see cref="T:LoggerMicroService.Models.ServiceResponse"/></returns>
+        </member>
+        <member name="T:LoggerMicroService.Helpers.Logger">
+            <summary>
+            Logger class
+            </summary>
+        </member>
+        <member name="M:LoggerMicroService.Helpers.Logger.#ctor">
+            <summary>
+            Constructor for loading Log4Net
+            </summary>
+        </member>
+        <member name="M:LoggerMicroService.Helpers.Logger.#ctor(log4net.ILog)">
+            <summary>
+            Constructor for <see cref="T:LoggerMicroService.Helpers.Logger"/>
+            </summary>
+            <param name="logger"><see cref="T:log4net.ILog"/></param>
+        </member>
+        <member name="M:LoggerMicroService.Helpers.Logger.Debug(System.String)">
+            <summary>
+            Logs message used for debugging purpose
+            </summary>
+            <param name="message">Log text</param>
+        </member>
+        <member name="M:LoggerMicroService.Helpers.Logger.Info(System.String)">
+            <summary>
+            Logs message used as Information
+            </summary>
+            <param name="message">Log text</param>
+        </member>
+        <member name="M:LoggerMicroService.Helpers.Logger.Error(System.String)">
+            <summary>
+            Logs Error message
+            </summary>
+            <param name="message">Log text</param>
+        </member>
+        <member name="M:LoggerMicroService.Helpers.Logger.Warn(System.String)">
+            <summary>
+            Logs message used as Warning
+            </summary>
+            <param name="message">Log text</param>
+        </member>
+        <member name="T:LoggerMicroService.Helpers.MessageLogger">
+            <summary>
+            MessageLogger class
+            </summary>
+        </member>
+        <member name="M:LoggerMicroService.Helpers.MessageLogger.#ctor">
+            <summary>
+            Constructor for loading Log4Net
+            </summary>
+        </member>
+        <member name="M:LoggerMicroService.Helpers.MessageLogger.#ctor(log4net.ILog)">
+            <summary>
+            Constructor for <see cref="T:LoggerMicroService.Helpers.MessageLogger"/>
+            </summary>
+            <param name="messageLogger"><see cref="T:log4net.ILog"/></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:LoggerMicroService.Helpers.MessageLogger.MessageLogger_Info(LoggerMicroService.Models.ServiceResponse)" -->
+        <member name="T:LoggerMicroService.Helpers.ServiceHelper">
+            <summary>
+            ServiceHelper class
+            </summary>
+        </member>
+        <member name="M:LoggerMicroService.Helpers.ServiceHelper.GetAsync">
+            <summary>
+            Calls external Service
+            </summary>
+            <returns><see cref="T:LoggerMicroService.Models.ServiceResponse"/></returns>
+        </member>
+        <member name="T:LoggerMicroService.Models.ServiceResponse">
+            <summary>
+            <see cref="T:LoggerMicroService.Models.ServiceResponse"/> model
+            </summary>
+        </member>
+    </members>
+</doc>
